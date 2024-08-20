@@ -25,6 +25,8 @@ def protocVersion = "3.25.3"
 tasks.withType(JavaCompile).configureEach {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
+    options.fork = true
+    options.forkOptions.executable = 'C:\\Users\\Lenovo\\.jdks\\corretto-21.0.4\\bin\\javac.exe'
 }
 
 ext {
